@@ -1,6 +1,8 @@
 # MissileMap
 Mapping IPs on a global map
 
+![my imgae](/asset/default.png)
+
 ## Learning Objectives
 - Extract meaningful data from logs using Splunk's field extraction tools and SPL (Search Processing Language).
 - Normalize and format data to meet specific requirements.
@@ -31,9 +33,14 @@ Missile Map also provides a test data set which allows us to see how it wants th
 ```splunk
 | inputlookup missilemap_testdata
 ```
+![my imgae](/asset/defaultdata.png)
+
 
 ## Normalizing our data
 Using the Splunk Search app I queried the VPN logs and below you can see a sample what pfSense OpenVPN logs look like.
+
+![my imgae](/asset/data.png)
+
 
 To feed the data into Missile Map I first needed to filter for all the IP addresses for connecting sessions. In Splunk we can extract a new field from the data using the built-in field extractor function. 
 Notice that everytime a connection to the server is made the log "openvpn server 'ovpns1' user 'vpn' address '47.153.255.97' - connected" is generated. Using the field extractor I can extract the IP address and assign it a fieldname of src_ip. Here is the output regex if you think regex is cool :)
@@ -59,7 +66,9 @@ index = pfsense sourcetype = pfsense:openvpn connected
 | table src_ip, start_lat, start_lon, end_lat, end_lon, animate, pulse_at_start
 ```
 > Note: animate and pulse_at_start don't have to be there and can be removed if it gets too laggy.
-              
+
+![my imgae](/asset/output.gif)
+
 ## Limitations
 The iplocation function seems to return a lat and lon that isnt the most accurate as the origin lines did not match with our actual location
 Another reason for this could be the fact that external IPs are being forwarded from the ISP and not from our homes.
