@@ -12,7 +12,7 @@ Mapping IPs on a global map
 ## Introduction
 One of the largest sources of data I started capturing from our Student Data Center was the VPN logs. We used a pfSense router and hosted a OpenVPN server on it to allow students access to the SDC resources.
 
-As I kept staring at the VPN logs coming into our Splunk server I wondered if there was a way to visualize the connections like on a map. A quick Google search and I found Missile Map an app created by Luke Monahan made available on SplunkBase.
+As I kept staring at the VPN logs coming into our Splunk server I wondered if there was a way to visualize the connections like on a map. A quick Google search and I found [Missile Map](https://splunkbase.splunk.com/app/3511) an app created by Luke Monahan made available on SplunkBase.
 
 ## Requirements
 To get the correct data into Missile Map we need to format the data coming in to match the specification for Missile Map. The documentation for Missile Map conveniently shows us what exactly the app looks for when processing the data.
