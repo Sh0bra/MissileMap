@@ -1,5 +1,4 @@
-# MissileMap
-Visualizing Security with Missile Map
+# Visualizing Security with Missile Map
 
 ![my imgae](/asset/default.png)
 
