@@ -1,5 +1,5 @@
 # MissileMap
-Mapping IPs on a global map
+Visualizing Security with Missile Map
 
 ![my imgae](/asset/default.png)
 
