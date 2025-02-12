@@ -38,7 +38,7 @@ Missile Map also provides a test data set which allows us to see how it wants th
 ## Normalizing our data
 Using the Splunk Search app I queried the VPN logs and below you can see a sample what pfSense OpenVPN logs look like.
 
-![my imgae](/asset/data.png)
+![my imgae](asset/data.png)
 
 
 To feed the data into Missile Map I first needed to filter for all the IP addresses for connecting sessions. In Splunk we can extract a new field from the data using the built-in field extractor function. 
